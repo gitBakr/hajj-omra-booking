@@ -7,18 +7,14 @@ export default defineConfig({
   root: path.resolve(__dirname, ''),
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html')
-      }
-    }
+    emptyOutDir: true
   },
   server: {
     proxy: {
       '/api': {
         target: process.env.VITE_API_URL || 'http://localhost:5001',
         changeOrigin: true,
+        secure: false
       }
     }
   }

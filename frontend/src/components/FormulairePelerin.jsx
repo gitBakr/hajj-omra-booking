@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './FormulairePelerin.css';
 import MesReservations from './MesReservations';
 
-const API_URL = 'http://localhost:5001';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
 const isDev = process.env.NODE_ENV === 'development';
 
 const FormulairePelerin = ({ 
@@ -622,8 +622,8 @@ const FormulairePelerin = ({
                     className="chambre-select"
                   >
                     <option value="quadruple">Chambre standard</option>
-                    <option value="triple">Chambre triple (+250€)</option>
-                    <option value="double">Chambre double (+500€)</option>
+                    <option value="triple">Chambre pour 3 personnes (+250€)</option>
+                    <option value="double">Chambre pour 2 personnes (+500€)</option>
                   </select>
                 </div>
               </div>
