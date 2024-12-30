@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: #1a1a1a;
     min-height: 100vh;
     padding: 20px;
     margin: 0;
@@ -9,15 +9,15 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 32px rgba(218, 165, 32, 0.2);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
+    border: 1px solid #DAA520;
   }
   
   .formulaire-container h2 {
     text-align: center;
-    color: #1a237e;
+    color: #DAA520;
     margin-bottom: 40px;
     font-size: 2.2em;
     font-weight: 600;
@@ -33,23 +33,59 @@ body {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background: linear-gradient(to right, #DAA520, #FFD700);
     border-radius: 2px;
   }
   
   .form-section {
     margin-bottom: 35px;
     padding: 25px;
-    background: #ffffff;
+    background: #222;
     border-radius: 15px;
-    border-left: 4px solid #00c6ff;
+    border-left: 4px solid #DAA520;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    color: #fff;
   }
   
   .form-section h3 {
-    color: #1a237e;
+    color: #FFD700;
     margin-bottom: 20px;
     font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .form-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #DAA520, #FFD700);
+    border-radius: 2px;
+  }
+  
+  .form-section h3:first-of-type {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-section h3:first-of-type::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+  }
+  
+  .form-section:nth-child(odd) h3 {
+    background: linear-gradient(to right, #DAA520, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .form-row {
@@ -68,7 +104,7 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #1a237e;
+    color: #DAA520;
     font-size: 0.95em;
   }
   
@@ -80,18 +116,19 @@ body {
   textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #DAA520;
     border-radius: 12px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #fff;
+    background: #333;
+    color: #fff;
   }
   
   input:focus,
   select:focus,
   textarea:focus {
-    border-color: #00c6ff;
-    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.1);
+    border-color: #FFD700;
+    box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.2);
     outline: none;
   }
   
@@ -101,14 +138,14 @@ body {
   }
   
   .submit-button {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
+    background: linear-gradient(135deg, #DAA520, #FFD700);
+    color: #000;
     padding: 15px 30px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -117,7 +154,7 @@ body {
   
   .submit-button:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
   }
   
   .submit-button:disabled {
@@ -163,8 +200,8 @@ body {
   }
   
   .success .message-content {
-    background: linear-gradient(135deg, rgba(46, 213, 115, 0.95), rgba(39, 180, 98, 0.95));
-    color: white;
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.9), rgba(255, 215, 0, 0.9));
+    color: #000;
   }
   
   .error .message-content {
@@ -215,8 +252,8 @@ body {
   
   .view-offers-btn,
   .view-reservations-btn {
-    background: linear-gradient(135deg, #6c5ce7, #a55eea);
-    color: white;
+    background: #DAA520;
+    color: #000;
     padding: 12px 25px;
     border: none;
     border-radius: 8px;
@@ -239,8 +276,8 @@ body {
   }
   
   .test-button {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    color: #000;
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
@@ -256,7 +293,7 @@ body {
   
   .test-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
   }
   
   .test-button.fill-test:hover {
@@ -281,10 +318,10 @@ body {
   }
   
   .formulaire-section h3 {
-    color: #1a237e;
+    color: #FFD700;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #DAA520;
   }
   
   .supprimer-formulaire-btn {
@@ -313,8 +350,8 @@ body {
   }
   
   .ajouter-button {
-    background: linear-gradient(135deg, #6c5ce7, #a55eea);
-    color: white;
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    color: #000;
     padding: 15px 30px;
     border: none;
     border-radius: 12px;
@@ -343,13 +380,13 @@ body {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #6c5ce7, #a55eea);
-    color: white;
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    color: #000;
     border: none;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
     transition: all 0.3s ease;
     z-index: 1000;
     display: flex;
@@ -359,7 +396,7 @@ body {
   
   .scroll-top-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
   }
   
   @media (max-width: 768px) {
@@ -370,8 +407,9 @@ body {
     .formulaire-container {
       margin: 0;
       padding: 10px;
+      width: 100%;
       max-width: 100%;
-      border-radius: 0;
+      box-sizing: border-box;
     }
   
     .form-row {
@@ -380,9 +418,10 @@ body {
     }
   
     .form-group {
-      width: calc(100% - 20px);
+      width: 100%;
+      padding: 0;
       margin-bottom: 15px;
-      padding-right: 10px;
+      box-sizing: border-box;
     }
   
     .formulaire-container h2 {
@@ -403,46 +442,81 @@ body {
   }
   
   .type-option {
+    position: relative;
     flex: 1;
     min-width: 280px;
     padding: 20px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #DAA520;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: #222;
+    color: #fff;
   }
   
   .type-option:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.2);
   }
   
   .type-option.selected {
-    border-color: #00c6ff;
-    background: linear-gradient(to bottom right, rgba(0, 198, 255, 0.1), rgba(0, 114, 255, 0.1));
-    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.2);
+    border-color: #FFD700;
+    background: linear-gradient(to bottom right, rgba(218, 165, 32, 0.2), rgba(255, 215, 0, 0.1));
+    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .type-option.selected::before {
+    content: '✓';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: #FFD700;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #222;
+    animation: scaleIn 0.3s ease;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
   
   .type-option h4 {
-    color: #1a237e;
+    color: #FFD700;
     font-size: 1.5em;
     margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   .type-option p {
-    color: #666;
+    color: #DAA520;
     margin: 5px 0;
   }
   
   .type-option .details {
-    color: #00c6ff;
+    color: #DAA520;
     font-weight: 500;
     margin-top: 10px;
   }
   
   .type-option .price {
     font-size: 1.2em;
-    color: #1a237e;
+    color: #FFD700;
     font-weight: 600;
     margin-top: 15px;
   }
@@ -455,12 +529,12 @@ body {
   }
   
   .reservation-card {
-    background: white;
+    background: #222;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #00c6ff;
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.2);
+    border-left: 4px solid #DAA520;
   }
   
   .reservation-header {
@@ -473,14 +547,14 @@ body {
   }
   
   .reservation-header h4 {
-    color: #1a237e;
+    color: #FFD700;
     font-size: 1.2em;
     margin: 0;
   }
   
   .person-number {
-    background: #6c5ce7;
-    color: white;
+    background: #DAA520;
+    color: #000;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -498,18 +572,19 @@ body {
   }
   
   .reservation-details strong {
-    color: #1a237e;
+    color: #DAA520;
     font-weight: 600;
   }
   
   .civilite-select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #DAA520;
     border-radius: 12px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #fff;
+    background: #333;
+    color: #fff;
     cursor: pointer;
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -519,19 +594,20 @@ body {
   }
   
   .civilite-select:focus {
-    border-color: #00c6ff;
-    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.1);
+    border-color: #DAA520;
+    box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
     outline: none;
   }
   
   .chambre-select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #DAA520;
     border-radius: 12px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #fff;
+    background: #333;
+    color: #fff;
     cursor: pointer;
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -541,60 +617,76 @@ body {
   }
   
   .chambre-select:focus {
-    border-color: #00c6ff;
-    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.1);
+    border-color: #DAA520;
+    box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
     outline: none;
   }
   
   .chambre-info {
     margin-top: 10px;
     padding: 10px 15px;
-    background: rgba(0, 198, 255, 0.1);
+    background: rgba(218, 165, 32, 0.1);
     border-radius: 8px;
     font-size: 0.9em;
+    color: #DAA520;
   }
   
   .chambre-detail {
-    color: #666;
+    color: #DAA520;
     margin-left: 8px;
     font-size: 0.9em;
   }
   
   @media screen and (max-width: 768px) {
     .type-pelerinage-selector {
-      flex-direction: column;
-      gap: 10px;
-      padding-right: 10px;
-      margin: 0 -10px;
+      width: 100%;
+      padding: 0;
+      margin: 0 0 15px 0;
+      box-sizing: border-box;
     }
   
     .type-option {
       width: 100%;
-      min-width: unset;
-      margin: 0;
+      margin: 0 0 10px 0;
       padding: 15px;
+      box-sizing: border-box;
     }
   
     .form-section {
-      padding: 15px;
+      width: 100%;
       margin: 0 0 15px 0;
-      border-radius: 8px;
+      padding: 15px;
+      box-sizing: border-box;
     }
   
     .form-group {
       width: 100%;
+      padding: 0;
       margin-bottom: 15px;
-      padding-right: 0;
+      box-sizing: border-box;
+    }
+  
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
     }
   
     .form-actions {
+      width: 100%;
       padding: 0;
+      box-sizing: border-box;
     }
   
     .submit-button,
     .ajouter-button {
       width: 100%;
       margin: 0;
+      box-sizing: border-box;
     }
   
     .message-container {
@@ -617,5 +709,21 @@ body {
     .type-option {
       padding: 10px;
       margin-right: 5px;
+    }
+  }
+  
+  .type-option.selected {
+    animation: borderGlow 2s infinite;
+  }
+  
+  @keyframes borderGlow {
+    0% {
+      border-color: #DAA520;
+    }
+    50% {
+      border-color: #FFD700;
+    }
+    100% {
+      border-color: #DAA520;
     }
   }
