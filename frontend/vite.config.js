@@ -7,7 +7,12 @@ export default defineConfig({
   root: path.resolve(__dirname, ''),
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      }
+    }
   },
   server: {
     proxy: {
