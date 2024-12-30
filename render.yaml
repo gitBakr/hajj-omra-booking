@@ -12,8 +12,9 @@ services:
 
   - type: static
     name: hajj-omra-booking-frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
-    publishDir: frontend/dist
+    publishDir: dist
     envVars:
       - key: VITE_API_URL
         value: https://hajj-omra-booking-api.onrender.com 
